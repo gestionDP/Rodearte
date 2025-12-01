@@ -9,9 +9,7 @@ const footerLinks = {
     { href: "#contacto", label: "Contacto" },
   ],
   contacto: [
-    { type: "phone", label: "Llámanos", value: "+34 XXX XXX XXX" },
-    { type: "email", label: "Escríbenos", value: "hola@rodearte.com" },
-    { type: "address", label: "Visítanos", value: "Dirección del estudio" },
+    { type: "email", label: "Escríbenos", value: "vanesa@rodearte.es" },
   ],
   redes: [
     { name: "Instagram", href: "#", icon: "📷" },
@@ -25,15 +23,14 @@ export function Footer() {
     <footer className="border-t border-border bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          {/* Logo y descripción */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4" aria-label="Rodearte">
               <Image
                 src="/logos/1.svg"
                 alt="Rodearte"
-                width={100}
-                height={125}
-                className="h-10 w-auto"
+                height={225}
+                width={180}
+                className="h-16 w-auto md:h-[180px] md:w-[144px]"
               />
             </Link>
             <p className="text-sm text-muted-foreground font-sans">
@@ -41,7 +38,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Navegación */}
           <div>
             <h3 className="text-sm font-semibold text-foreground font-sans mb-4">
               Navegación
@@ -60,7 +56,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contacto */}
           <div>
             <h3 className="text-sm font-semibold text-foreground font-sans mb-4">
               Contacto
@@ -76,31 +71,8 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Redes sociales */}
-          <div>
-            <h3 className="text-sm font-semibold text-foreground font-sans mb-4">
-              Síguenos
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.redes.map((red) => (
-                <li key={red.name}>
-                  <Link
-                    href={red.href}
-                    className="text-sm text-muted-foreground font-sans hover:text-foreground transition-colors flex items-center gap-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>{red.icon}</span>
-                    {red.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
-        {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-center text-sm text-muted-foreground font-sans">
             © {new Date().getFullYear()} Rodearte. Todos los derechos
