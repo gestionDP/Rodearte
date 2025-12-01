@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen w-full overflow-hidden text-foreground"
+      className="relative min-h-[70vh] md:min-h-screen w-full overflow-hidden text-foreground"
       style={{ marginTop: 0 }}
     >
       <div className="absolute inset-0">
@@ -27,56 +27,31 @@ export function Hero() {
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/20 via-background/5 to-transparent" />
 
-      <div className="relative z-10 flex min-h-screen flex-col justify-between">
-        <div className="container mx-auto px-4 pt-32 sm:pt-36 lg:pt-40">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-white/80 font-sans mb-4 sm:mb-6">
+      <div className="relative z-10 flex min-h-[70vh] md:min-h-screen flex-col justify-between">
+        <div className="container mx-auto px-4 pt-32 sm:pt-40 md:pt-48 lg:pt-56">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-white/90 font-sans mb-3 sm:mb-4">
             Estudio de movimiento somático
           </p>
-          <h1 className="max-w-3xl text-3xl sm:text-4xl font-serif font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl text-2xl sm:text-3xl md:text-5xl font-serif font-bold leading-tight text-white lg:text-6xl">
             Aquí tu cuerpo piensa, respira y vuelve a ti.
           </h1>
-          <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base font-sans text-white/90 md:text-lg">
-            Rodearte es un espacio íntimo para escucharte. Movimiento
-            consciente, somática creativa y acompañamiento humano para habitarte
-            con calma.
+          <p className="mt-3 sm:mt-4 md:mt-6 max-w-2xl text-xs sm:text-sm font-sans text-white/95 md:text-base lg:text-lg">
+            Un espacio íntimo para escucharte y habitarte.
           </p>
         </div>
 
-        <div className="container mx-auto px-4 pb-10 sm:pb-12 lg:pb-16">
-          {/* Mobile: Layout simplificado */}
-          <div className="lg:hidden space-y-6">
-            {/* Testimonio */}
-            <div>
-              <h2 className="text-xs uppercase tracking-[0.4em] text-white font-sans mb-3">
-                Lo que dicen quienes practican
-              </h2>
-              <div className="border-t border-white/30 mb-4" />
-              <div className="rounded-2xl border border-white/25 bg-white/10 text-white backdrop-blur-sm p-4">
-                <p className="text-sm font-serif leading-relaxed mb-3">
-                  "{testimonial.quote}"
-                </p>
-                <p className="text-xs font-sans text-white/70">
-                  {testimonial.author}
-                </p>
-              </div>
-            </div>
-
-            {/* Sobre Rodearte */}
-            <div>
-              <h2 className="text-xs uppercase tracking-[0.4em] text-white font-sans mb-3">
-                Sobre Rodearte
-              </h2>
-              <div className="border-t border-white/30 mb-4" />
-              <div className="rounded-2xl border border-white/25 bg-white/10 text-white backdrop-blur-sm p-4">
-                <p className="text-sm font-sans text-white/90 leading-relaxed">
-                  Somos una comunidad íntima donde el movimiento es escucha
-                  profunda. Cada clase combina somática creativa, tiempo para ti
-                  y acompañamiento humano para sostener tus procesos y crear tu
-                  propio ritmo.
-                </p>
-              </div>
+        <div className="container mx-auto px-4 pb-8 sm:pb-10 lg:pb-16">
+          {/* Mobile: Layout simplificado - solo testimonio */}
+          <div className="lg:hidden">
+            <div className="rounded-2xl border border-white/30 bg-white/15 text-white backdrop-blur-md p-4">
+              <p className="text-sm font-serif leading-relaxed mb-2">
+                "{testimonial.quote}"
+              </p>
+              <p className="text-xs font-sans text-white/80">
+                {testimonial.author}
+              </p>
             </div>
           </div>
 
