@@ -25,12 +25,21 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4" aria-label="Rodearte">
+              {/* Logo para mobile */}
+              <Image
+                src="/logos/6.svg"
+                alt="Rodearte"
+                height={180}
+                width={144}
+                className="h-32 w-auto sm:h-40 md:hidden"
+              />
+              {/* Logo para desktop */}
               <Image
                 src="/logos/1.svg"
                 alt="Rodearte"
-                height={225}
-                width={180}
-                className="h-16 w-auto md:h-[180px] md:w-[144px]"
+                height={180}
+                width={144}
+                className="hidden md:block md:h-[180px] md:w-[144px]"
               />
             </Link>
             <p className="text-sm text-muted-foreground font-sans">
