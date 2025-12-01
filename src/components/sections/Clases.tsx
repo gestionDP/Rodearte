@@ -13,7 +13,7 @@ const clases = [
       { label: "Movilidad", icon: Heart },
       { label: "Energía", icon: Sparkles },
     ],
-    imagen: "/jpg/fullBody.jpg", // Placeholder - reemplazar con imagen de clase con pesas
+    imagen: "/jpg/fullbody.jpg", // Placeholder - reemplazar con imagen de clase con pesas
   },
   {
     id: "02",

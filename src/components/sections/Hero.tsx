@@ -17,14 +17,16 @@ export function Hero() {
       className="relative min-h-screen w-full overflow-hidden text-foreground"
       style={{ marginTop: 0 }}
     >
-      <Image
-        src="/jpg/rodearte_01-22.jpg"
-        alt="Personas practicando movimiento consciente en Rodearte"
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-      />
+      <div className="absolute inset-0">
+        <Image
+          src="/jpg/Rodearte_01-22.jpg"
+          alt="Personas practicando movimiento consciente en Rodearte"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/10 to-transparent" />
 
       <div className="relative z-10 flex min-h-screen flex-col justify-between">
