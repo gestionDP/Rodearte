@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paleta de colores Rodearte */
+    /* #faf9f5 - Crema claro */
+    --background: 50 20% 97%;
+    /* #4e5640 - Verde oliva oscuro */
+    --foreground: 85 15% 29%;
+    /* #faf9f5 - Crema claro */
+    --card: 50 20% 97%;
+    /* #4e5640 - Verde oliva oscuro */
+    --card-foreground: 85 15% 29%;
+    /* #faf9f5 - Crema claro */
+    --popover: 50 20% 97%;
+    /* #4e5640 - Verde oliva oscuro */
+    --popover-foreground: 85 15% 29%;
+    /* #8d876b - Verde oliva medio */
+    --primary: 50 15% 49%;
+    /* #faf9f5 - Crema claro */
+    --primary-foreground: 50 20% 97%;
+    /* #c5baa8 - Beige */
+    --secondary: 35 20% 72%;
+    /* #4e5640 - Verde oliva oscuro */
+    --secondary-foreground: 85 15% 29%;
+    /* #c5baa8 - Beige */
+    --muted: 35 20% 72%;
+    /* #8d876b - Verde oliva medio */
+    --muted-foreground: 50 15% 49%;
+    /* #8d876b - Verde oliva medio */
+    --accent: 50 15% 49%;
+    /* #faf9f5 - Crema claro */
+    --accent-foreground: 50 20% 97%;
+    /* Rojo para acciones destructivas */
+    --destructive: 0 84.2% 60.2%;
+    /* #faf9f5 - Crema claro */
+    --destructive-foreground: 50 20% 97%;
+    /* #c5baa8 - Beige */
+    --border: 35 20% 72%;
+    /* #c5baa8 - Beige */
+    --input: 35 20% 72%;
+    /* #4e5640 - Verde oliva oscuro */
+    --ring: 85 15% 29%;
+    --radius: 0.5rem;
+    /* Colores para gráficos (mantenidos para compatibilidad) */
+    --chart-1: 50 15% 49%;
+    --chart-2: 85 15% 29%;
+    --chart-3: 35 20% 72%;
+    --chart-4: 50 20% 97%;
+    --chart-5: 50 15% 49%;
+  }
+
+  .dark {
+    /* Modo oscuro con paleta invertida */
+    /* #4e5640 - Verde oliva oscuro como fondo */
+    --background: 85 15% 29%;
+    /* #faf9f5 - Crema claro como texto */
+    --foreground: 50 20% 97%;
+    /* #4e5640 - Verde oliva oscuro */
+    --card: 85 15% 29%;
+    /* #faf9f5 - Crema claro */
+    --card-foreground: 50 20% 97%;
+    /* #4e5640 - Verde oliva oscuro */
+    --popover: 85 15% 29%;
+    /* #faf9f5 - Crema claro */
+    --popover-foreground: 50 20% 97%;
+    /* #8d876b - Verde oliva medio */
+    --primary: 50 15% 49%;
+    /* #faf9f5 - Crema claro */
+    --primary-foreground: 50 20% 97%;
+    /* #8d876b - Verde oliva medio más oscuro */
+    --secondary: 50 15% 40%;
+    /* #faf9f5 - Crema claro */
+    --secondary-foreground: 50 20% 97%;
+    /* #8d876b - Verde oliva medio */
+    --muted: 50 15% 40%;
+    /* #c5baa8 - Beige */
+    --muted-foreground: 35 20% 72%;
+    /* #8d876b - Verde oliva medio */
+    --accent: 50 15% 49%;
+    /* #faf9f5 - Crema claro */
+    --accent-foreground: 50 20% 97%;
+    /* Rojo para acciones destructivas */
+    --destructive: 0 62.8% 30.6%;
+    /* #faf9f5 - Crema claro */
+    --destructive-foreground: 50 20% 97%;
+    /* #8d876b - Verde oliva medio */
+    --border: 50 15% 40%;
+    /* #8d876b - Verde oliva medio */
+    --input: 50 15% 40%;
+    /* #c5baa8 - Beige */
+    --ring: 35 20% 72%;
+    --chart-1: 50 15% 49%;
+    --chart-2: 85 15% 29%;
+    --chart-3: 35 20% 72%;
+    --chart-4: 50 20% 97%;
+    --chart-5: 50 15% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .font-title {
+    font-family: var(--font-serif);
+  }
+  .font-body {
+    font-family: var(--font-sans);
+  }
+}
+
