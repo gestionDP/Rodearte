@@ -70,7 +70,8 @@ export function ContactBottomSheet({
     } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.",
+        message:
+          "Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.",
       });
     } finally {
       setIsSubmitting(false);
@@ -79,7 +80,10 @@ export function ContactBottomSheet({
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="bottom" className="h-[90vh] max-h-[600px]">
+      <SheetContent
+        side="bottom"
+        className="h-[90vh] max-h-[600px] overflow-y-auto"
+      >
         <SheetHeader className="text-left">
           <SheetTitle className="text-2xl font-serif text-foreground">
             Contacto
@@ -89,7 +93,7 @@ export function ContactBottomSheet({
           </SheetDescription>
         </SheetHeader>
 
-        <form onSubmit={handleSubmit} className="mt-6 space-y-6">
+        <form onSubmit={handleSubmit} className="mt-6 space-y-6 pb-4">
           {/* Nombre */}
           <div className="space-y-2">
             <label
@@ -206,4 +210,3 @@ export function ContactBottomSheet({
     </Sheet>
   );
 }
-
