@@ -13,27 +13,21 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import { ContactBottomSheet } from "@/components/contact/ContactBottomSheet";
 import { cn } from "@/lib/utils";
+
+const WHATSAPP_URL = "https://wa.me/34687575521";
 
 const navLinks = [
   { href: "#clases", label: "Clases" },
   { href: "#sobre", label: "Sobre" },
-  { href: "#mono", label: "MONO" },
+  { href: "#mono", label: "Ropa" },
 ];
 
 export function Navbar() {
   const isScrolled = useScroll(50);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsContactOpen(true);
     setIsMobileMenuOpen(false);
   };
 
@@ -104,13 +98,17 @@ export function Navbar() {
                   </SheetClose>
                 ))}
                 <div className="mt-4 pt-4 border-t border-border">
-                  <button
-                    onClick={handleContactClick}
-                    className="flex items-center gap-2 rounded-md bg-primary px-4 py-3 text-base font-sans text-primary-foreground w-full"
-                  >
-                    <Phone className="h-4 w-4" />
-                    Contacto
-                  </button>
+                  <SheetClose asChild>
+                    <Link
+                      href={WHATSAPP_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 rounded-md bg-primary px-4 py-3 text-base font-sans text-primary-foreground w-full"
+                    >
+                      <Phone className="h-4 w-4" />
+                      Contacto
+                    </Link>
+                  </SheetClose>
                 </div>
               </nav>
             </SheetContent>
@@ -118,20 +116,17 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center h-full border-l border-white/30 bg-primary w-auto">
-          <button
-            onClick={handleContactClick}
+          <Link
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 lg:px-8 text-primary-foreground hover:opacity-80 transition-opacity font-sans text-sm lg:text-base"
           >
             <Phone className="h-4 w-4" />
             Contacto
-          </button>
+          </Link>
         </div>
       </div>
-
-      <ContactBottomSheet
-        open={isContactOpen}
-        onOpenChange={setIsContactOpen}
-      />
     </nav>
   );
 }

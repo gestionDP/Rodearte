@@ -25,12 +25,6 @@ export function Mono() {
   return (
     <section id="mono" className="py-16 md:py-24 bg-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-background mb-4">
-            MONO — Movimiento que te viste
-          </h2>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {productosMono.map((producto, index) => {
             const animations = [
@@ -67,8 +61,7 @@ export function Mono() {
 
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-base md:text-lg font-sans text-background/90 leading-relaxed">
-            Una línea de ropa creada para acompañarte en tu práctica. Piezas
-            para sentirse libre, cómoda y presente.
+            Ropa de Rodearte, creada por Vanesa.
           </p>
         </div>
       </div>
