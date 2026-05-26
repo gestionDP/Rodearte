@@ -1,15 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const WHATSAPP_URL = "https://wa.me/34687575521";
+
 const footerLinks = {
   navegacion: [
-    { href: "#clases", label: "Clases" },
-    { href: "#sobre", label: "Sobre" },
-    { href: "#mono", label: "MONO" },
-    { href: "#contacto", label: "Contacto" },
+    { href: "#clases", label: "Clases", external: false },
+    { href: "#sobre", label: "Sobre", external: false },
+    { href: "#mono", label: "Ropa", external: false },
+    { href: WHATSAPP_URL, label: "Contacto", external: true },
   ],
   contacto: [
-    { type: "email", label: "Escríbenos", value: "vanesa@rodearte.es" },
+    { label: "WhatsApp", value: "+34 687 575 521", href: WHATSAPP_URL },
   ],
   redes: [
     { name: "Instagram", href: "#", icon: "📷" },
@@ -56,6 +58,8 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
                     className="text-sm text-muted-foreground font-sans hover:text-foreground transition-colors"
                   >
                     {link.label}
@@ -72,10 +76,15 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.contacto.map((item, index) => (
                 <li key={index}>
-                  <span className="text-sm text-muted-foreground font-sans">
+                  <Link
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground font-sans hover:text-foreground transition-colors"
+                  >
                     {item.label}:{" "}
                     <span className="text-foreground">{item.value}</span>
-                  </span>
+                  </Link>
                 </li>
               ))}
             </ul>

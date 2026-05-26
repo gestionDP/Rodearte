@@ -23,7 +23,7 @@ export default function Home() {
         {/* Sección 4: Clases */}
         <Clases />
 
-        {/* Sección 6: MONO */}
+        {/* Sección 6: Ropa */}
         <Mono />
 
         {/* Sección 8: Pasaporte de Asistencia */}
