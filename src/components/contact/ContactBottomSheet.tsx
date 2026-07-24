@@ -170,6 +170,41 @@ export function ContactBottomSheet({
             />
           </div>
 
+          <div className="space-y-2">
+            <label
+              htmlFor="privacy-consent"
+              className="flex items-start gap-2 text-xs text-muted-foreground font-sans cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                id="privacy-consent"
+                name="privacyConsent"
+                required
+                className="mt-0.5 h-4 w-4 shrink-0 rounded border-input"
+              />
+              <span>
+                He leído y acepto la{" "}
+                <a
+                  href="/politica-privacidad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-foreground"
+                >
+                  Política de Privacidad
+                </a>{" "}
+                *
+              </span>
+            </label>
+            <p className="text-[11px] leading-relaxed text-muted-foreground/80 font-sans">
+              Información básica sobre protección de datos — Responsable: Gestión del Papeleo,
+              S.L. Finalidad: atender tu solicitud y responderte. Legitimación: tu
+              consentimiento. Destinatarios: Formspree, Inc. (EE. UU., Marco de Privacidad de
+              Datos) como proveedor del formulario. Derechos: acceso, rectificación, supresión y
+              otros escribiendo a info@gestiondelpapeleo.com. Más información en la Política de
+              Privacidad.
+            </p>
+          </div>
+
           {submitStatus.type && (
             <div
               className={cn(
