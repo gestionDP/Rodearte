@@ -18,6 +18,12 @@ const footerLinks = {
     { name: "Facebook", href: "#", icon: "👥" },
     { name: "LinkedIn", href: "#", icon: "💼" },
   ],
+  legal: [
+    { href: "/aviso-legal", label: "Aviso Legal" },
+    { href: "/politica-privacidad", label: "Política de Privacidad" },
+    { href: "/politica-cookies", label: "Política de Cookies" },
+    { href: "/condiciones-uso", label: "Condiciones de Uso" },
+  ],
 };
 
 export function Footer() {
@@ -96,6 +102,20 @@ export function Footer() {
             © {new Date().getFullYear()} Rodearte. Todos los derechos
             reservados.
           </p>
+          <nav
+            aria-label="Enlaces legales"
+            className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
+          >
+            {footerLinks.legal.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-xs text-muted-foreground font-sans hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>
