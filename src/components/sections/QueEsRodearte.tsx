@@ -3,67 +3,39 @@ import Link from "next/link";
 
 export function QueEsRodearte() {
   return (
-    <section
-      id="sobre"
-      className="relative min-h-screen w-full overflow-hidden"
-    >
-      <Image
-        src="/jpg/aboutUs.avif"
-        alt="Vanesa sentada, acogedora y serena"
-        fill
-        className="object-cover"
-        sizes="100vw"
-        priority
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/20 to-transparent" />
+    <section id="sobre" className="bg-background pb-16 pt-6 md:pb-24 md:pt-10">
+      <div className="rd-container grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1.18fr] md:gap-[8%]">
+        <div className="order-2 md:order-1">
+          <h2 className="text-h2 font-serif text-foreground">Qué es Rodearte</h2>
+          <p className="text-small mt-1 font-sans italic text-primary">
+            Un espacio para volver a ti
+          </p>
 
-      <div className="relative z-10 flex min-h-screen flex-col justify-between">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 lg:pt-48">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-4">
-              Qué es Rodearte
-            </h2>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-sans font-normal text-white/90">
-              Un espacio para volver a ti
-            </p>
-          </div>
+          <p className="text-lead mt-8 font-sans italic text-primary md:mt-10">
+            Un estudio donde cada clase está pensada para que escuches tu
+            cuerpo, te muevas a tu ritmo y reconectes con tu cuerpo.
+          </p>
+          <p className="text-lead mt-5 font-sans font-bold italic text-primary">
+            Aquí el cuerpo no se fuerza. Se acompaña
+          </p>
+
+          <p className="text-small mt-8 max-w-[300px] font-sans italic text-primary md:mt-12">
+            Un espacio para moverte sin presión, a tu ritmo, siempre cuidada
+          </p>
+
+          <Link href="#clases" className="rd-outline-button mt-7 md:mt-8">
+            Conoce nuestras clases
+          </Link>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-20">
-          <div className="flex justify-end">
-            <div className="rounded-3xl border border-white/25 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/70 backdrop-blur-xl shadow-xl p-6 md:p-8 max-w-md w-full">
-              <div className="space-y-4 text-white">
-                <p className="text-base md:text-lg font-sans leading-relaxed">
-                  Un estudio donde trabajamos desde la{" "}
-                  <span className="text-xl md:text-2xl font-serif font-bold text-background">
-                    somática creativa
-                  </span>
-                  , el{" "}
-                  <span className="text-lg md:text-xl font-serif font-semibold text-secondary">
-                    movimiento integrativo
-                  </span>{" "}
-                  y la{" "}
-                  <span className="text-lg md:text-xl font-serif font-semibold text-background/80">
-                    escucha profunda
-                  </span>
-                  .
-                </p>
-                <p className="text-base md:text-lg font-sans leading-relaxed">
-                  Aquí el cuerpo se convierte en un{" "}
-                  <span className="text-xl md:text-2xl font-serif font-bold text-background">
-                    lugar seguro
-                  </span>
-                  .
-                </p>
-                <Link
-                  href="#clases"
-                  className="inline-block text-sm md:text-base font-sans text-white/90 hover:text-white transition-colors underline underline-offset-4"
-                >
-                  Conoce nuestras clases
-                </Link>
-              </div>
-            </div>
-          </div>
+        <div className="relative order-1 aspect-[334/423] w-full overflow-hidden md:order-2">
+          <Image
+            src="/jpg/Rodearte_03-124.jpg"
+            alt="Vanesa, fundadora de Rodearte, sonriendo en el estudio"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover object-[51%_83%]"
+          />
         </div>
       </div>
     </section>

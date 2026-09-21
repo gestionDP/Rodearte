@@ -1,122 +1,57 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ContactButton } from "@/components/contact/ContactButton";
 
-const WHATSAPP_URL = "https://wa.me/34687575521";
+const REVIEWS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Rodearte%20L%27Eliana";
 
-const footerLinks = {
-  navegacion: [
-    { href: "#clases", label: "Clases", external: false },
-    { href: "#sobre", label: "Sobre", external: false },
-    { href: "#mono", label: "Ropa", external: false },
-    { href: WHATSAPP_URL, label: "Contacto", external: true },
-  ],
-  contacto: [
-    { label: "WhatsApp", value: "+34 687 575 521", href: WHATSAPP_URL },
-  ],
-  redes: [
-    { name: "Instagram", href: "#", icon: "📷" },
-    { name: "Facebook", href: "#", icon: "👥" },
-    { name: "LinkedIn", href: "#", icon: "💼" },
-  ],
-  legal: [
-    { href: "/aviso-legal", label: "Aviso Legal" },
-    { href: "/politica-privacidad", label: "Política de Privacidad" },
-    { href: "/politica-cookies", label: "Política de Cookies" },
-    { href: "/condiciones-uso", label: "Condiciones de Uso" },
-  ],
-};
+const legalLinks = [
+  { href: "/aviso-legal", label: "Aviso legal" },
+  { href: "/politica-privacidad", label: "Privacidad" },
+  { href: "/politica-cookies", label: "Cookies" },
+  { href: "/condiciones-uso", label: "Condiciones de uso" },
+  { href: "/politica-cookies", label: "Gestionar cookies" },
+];
+
+const linkClass =
+  "font-sans text-[13px] text-[color:var(--cream-text)] transition-opacity hover:opacity-70";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4" aria-label="Rodearte">
-              {/* Logo para mobile */}
-              <Image
-                src="/logos/6.svg"
-                alt="Rodearte"
-                height={180}
-                width={144}
-                className="h-32 w-auto sm:h-40 md:hidden"
-              />
-              {/* Logo para desktop */}
-              <Image
-                src="/logos/1.svg"
-                alt="Rodearte"
-                height={180}
-                width={144}
-                className="hidden md:block md:h-[180px] md:w-[144px]"
-              />
+    <footer className="bg-foreground pb-14 pt-11 text-[color:var(--cream-text)]">
+      <div className="rd-container">
+        <div className="flex items-start justify-between">
+          <Link href="/" aria-label="Rodearte, inicio">
+            <Image
+              src="/logos/wordmark-cream.svg"
+              alt="Rodearte"
+              width={550}
+              height={170}
+              className="h-auto w-[130px] md:w-[160px]"
+            />
+          </Link>
+          <nav aria-label="Enlaces del pie" className="flex items-center gap-5 pt-2">
+            <ContactButton className={linkClass}>Contacto</ContactButton>
+            <Link href={REVIEWS_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              Reseñas
             </Link>
-            <p className="text-sm text-muted-foreground font-sans">
-              Un espacio de movimiento consciente para escucharte y habitarte.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-foreground font-sans mb-4">
-              Navegación
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.navegacion.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    target={link.external ? "_blank" : undefined}
-                    rel={link.external ? "noopener noreferrer" : undefined}
-                    className="text-sm text-muted-foreground font-sans hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-foreground font-sans mb-4">
-              Contacto
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.contacto.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-muted-foreground font-sans hover:text-foreground transition-colors"
-                  >
-                    {item.label}:{" "}
-                    <span className="text-foreground">{item.value}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-center text-sm text-muted-foreground font-sans">
-            © {new Date().getFullYear()} Rodearte. Todos los derechos
-            reservados.
-          </p>
-          <nav
-            aria-label="Enlaces legales"
-            className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
-          >
-            {footerLinks.legal.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs text-muted-foreground font-sans hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
           </nav>
         </div>
+
+        <nav
+          aria-label="Enlaces legales"
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-2 md:mt-6"
+        >
+          {legalLinks.map((link) => (
+            <Link key={link.label} href={link.href} className={linkClass}>
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        <p className="mt-4 text-center font-sans text-[13px] text-[color:var(--cream-text)] opacity-40">
+          © {new Date().getFullYear()} Rodearte. Todos los derechos reservados.
+        </p>
       </div>
     </footer>
   );

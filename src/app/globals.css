@@ -4,99 +4,67 @@
 
 @layer base {
   :root {
-    /* Paleta de colores Rodearte */
-    /* #faf9f5 - Crema claro */
-    --background: 50 20% 97%;
+    /* Paleta Rodearte (tokens del diseño de Canva) */
+    /* #faf9f5 - Crema */
+    --background: 50 33% 97%;
     /* #4e5640 - Verde oliva oscuro */
-    --foreground: 85 15% 29%;
-    /* #faf9f5 - Crema claro */
-    --card: 50 20% 97%;
-    /* #4e5640 - Verde oliva oscuro */
-    --card-foreground: 85 15% 29%;
-    /* #faf9f5 - Crema claro */
-    --popover: 50 20% 97%;
-    /* #4e5640 - Verde oliva oscuro */
-    --popover-foreground: 85 15% 29%;
+    --foreground: 82 15% 29%;
+    --card: 50 33% 97%;
+    --card-foreground: 82 15% 29%;
+    --popover: 50 33% 97%;
+    --popover-foreground: 82 15% 29%;
     /* #8d876b - Verde oliva medio */
-    --primary: 50 15% 49%;
-    /* #faf9f5 - Crema claro */
-    --primary-foreground: 50 20% 97%;
+    --primary: 49 14% 49%;
+    --primary-foreground: 50 33% 97%;
     /* #c5baa8 - Beige */
-    --secondary: 35 20% 72%;
-    /* #4e5640 - Verde oliva oscuro */
-    --secondary-foreground: 85 15% 29%;
-    /* #c5baa8 - Beige */
-    --muted: 35 20% 72%;
-    /* #8d876b - Verde oliva medio */
-    --muted-foreground: 50 15% 49%;
-    /* #8d876b - Verde oliva medio */
-    --accent: 50 15% 49%;
-    /* #faf9f5 - Crema claro */
-    --accent-foreground: 50 20% 97%;
-    /* Rojo para acciones destructivas */
+    --secondary: 37 20% 71%;
+    --secondary-foreground: 82 15% 29%;
+    --muted: 37 20% 71%;
+    --muted-foreground: 49 14% 49%;
+    --accent: 49 14% 49%;
+    --accent-foreground: 50 33% 97%;
     --destructive: 0 84.2% 60.2%;
-    /* #faf9f5 - Crema claro */
-    --destructive-foreground: 50 20% 97%;
-    /* #c5baa8 - Beige */
-    --border: 35 20% 72%;
-    /* #c5baa8 - Beige */
-    --input: 35 20% 72%;
-    /* #4e5640 - Verde oliva oscuro */
-    --ring: 85 15% 29%;
+    --destructive-foreground: 50 33% 97%;
+    --border: 37 20% 71%;
+    --input: 37 20% 71%;
+    --ring: 82 15% 29%;
     --radius: 0.5rem;
-    /* Colores para gráficos (mantenidos para compatibilidad) */
-    --chart-1: 50 15% 49%;
-    --chart-2: 85 15% 29%;
-    --chart-3: 35 20% 72%;
-    --chart-4: 50 20% 97%;
-    --chart-5: 50 15% 49%;
+    --chart-1: 49 14% 49%;
+    --chart-2: 82 15% 29%;
+    --chart-3: 37 20% 71%;
+    --chart-4: 50 33% 97%;
+    --chart-5: 49 14% 49%;
+
+    /* Colores puntuales del Canva */
+    --cream-text: #efe8d9;
+    --nav-button-border: #763920;
   }
 
   .dark {
-    /* Modo oscuro con paleta invertida */
-    /* #4e5640 - Verde oliva oscuro como fondo */
-    --background: 85 15% 29%;
-    /* #faf9f5 - Crema claro como texto */
-    --foreground: 50 20% 97%;
-    /* #4e5640 - Verde oliva oscuro */
-    --card: 85 15% 29%;
-    /* #faf9f5 - Crema claro */
-    --card-foreground: 50 20% 97%;
-    /* #4e5640 - Verde oliva oscuro */
-    --popover: 85 15% 29%;
-    /* #faf9f5 - Crema claro */
-    --popover-foreground: 50 20% 97%;
-    /* #8d876b - Verde oliva medio */
-    --primary: 50 15% 49%;
-    /* #faf9f5 - Crema claro */
-    --primary-foreground: 50 20% 97%;
-    /* #8d876b - Verde oliva medio más oscuro */
-    --secondary: 50 15% 40%;
-    /* #faf9f5 - Crema claro */
-    --secondary-foreground: 50 20% 97%;
-    /* #8d876b - Verde oliva medio */
-    --muted: 50 15% 40%;
-    /* #c5baa8 - Beige */
-    --muted-foreground: 35 20% 72%;
-    /* #8d876b - Verde oliva medio */
-    --accent: 50 15% 49%;
-    /* #faf9f5 - Crema claro */
-    --accent-foreground: 50 20% 97%;
-    /* Rojo para acciones destructivas */
+    --background: 82 15% 29%;
+    --foreground: 50 33% 97%;
+    --card: 82 15% 29%;
+    --card-foreground: 50 33% 97%;
+    --popover: 82 15% 29%;
+    --popover-foreground: 50 33% 97%;
+    --primary: 49 14% 49%;
+    --primary-foreground: 50 33% 97%;
+    --secondary: 49 14% 40%;
+    --secondary-foreground: 50 33% 97%;
+    --muted: 49 14% 40%;
+    --muted-foreground: 37 20% 71%;
+    --accent: 49 14% 49%;
+    --accent-foreground: 50 33% 97%;
     --destructive: 0 62.8% 30.6%;
-    /* #faf9f5 - Crema claro */
-    --destructive-foreground: 50 20% 97%;
-    /* #8d876b - Verde oliva medio */
-    --border: 50 15% 40%;
-    /* #8d876b - Verde oliva medio */
-    --input: 50 15% 40%;
-    /* #c5baa8 - Beige */
-    --ring: 35 20% 72%;
-    --chart-1: 50 15% 49%;
-    --chart-2: 85 15% 29%;
-    --chart-3: 35 20% 72%;
-    --chart-4: 50 20% 97%;
-    --chart-5: 50 15% 49%;
+    --destructive-foreground: 50 33% 97%;
+    --border: 49 14% 40%;
+    --input: 49 14% 40%;
+    --ring: 37 20% 71%;
+    --chart-1: 49 14% 49%;
+    --chart-2: 82 15% 29%;
+    --chart-3: 37 20% 71%;
+    --chart-4: 50 33% 97%;
+    --chart-5: 49 14% 49%;
   }
 }
 
@@ -104,11 +72,34 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-serif font-normal;
+  }
+}
+
+@layer components {
+  /* Contenedor de la landing: 10 % de margen lateral en el Canva (80/800) */
+  .rd-container {
+    width: min(100% - 2.5rem, 1180px);
+    margin-inline: auto;
+  }
+  @media (min-width: 1024px) {
+    .rd-container {
+      width: min(100% - 8rem, 1180px);
+    }
+  }
+
+  /* Botón contorneado del Canva (borde 0,5 px, texto cursiva) */
+  .rd-outline-button {
+    @apply inline-flex items-center justify-center border border-foreground/80 bg-transparent px-7 py-1.5 font-sans italic text-foreground transition-colors hover:bg-foreground hover:text-background;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   }
 }
 
@@ -119,51 +110,33 @@
   .font-body {
     font-family: var(--font-sans);
   }
-}
-
-@keyframes float-left {
-  0%, 100% {
-    transform: translateX(0);
+  /* Escala tipográfica fluida (Canva 800 px → 1280 px ≈ ×1.6) */
+  .text-h1 {
+    font-size: clamp(2rem, 3.5vw, 2.9rem);
+    line-height: 1.08;
   }
-  50% {
-    transform: translateX(-15px);
+  .text-h2 {
+    font-size: clamp(1.75rem, 2.8vw, 2.3rem);
+    line-height: 1.1;
   }
-}
-
-@keyframes float-right {
-  0%, 100% {
-    transform: translateX(0);
+  .text-body {
+    font-size: clamp(0.95rem, 1.3vw, 1.08rem);
+    line-height: 1.25;
   }
-  50% {
-    transform: translateX(15px);
+  .text-lead {
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    line-height: 1.2;
   }
-}
-
-@keyframes float-center {
-  0%, 100% {
-    transform: translateX(0);
+  .text-small {
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    line-height: 1.3;
   }
-  50% {
-    transform: translateX(10px);
-  }
-}
-
-.animate-float-left {
-  animation: float-left 6s ease-in-out infinite;
-}
-
-.animate-float-right {
-  animation: float-right 7s ease-in-out infinite;
-}
-
-.animate-float-center {
-  animation: float-center 8s ease-in-out infinite;
 }
 
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -172,6 +145,5 @@
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 1s ease-out;
+  animation: fade-in-up 0.9s ease-out both;
 }
-
