@@ -1,136 +1,68 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Zap, Heart, Wind, Sparkles } from "lucide-react";
+import { Blob } from "@/components/sections/Blob";
 
 const clases = [
   {
-    id: "01",
-    nombre: "Full Body",
-    descripcion: "Fuerza suave, movilidad y energía.",
-    descripcionLarga: "Un trabajo completo para activar cuerpo y presencia.",
-    beneficios: [
-      { label: "Fuerza", icon: Zap },
-      { label: "Movilidad", icon: Heart },
-      { label: "Energía", icon: Sparkles },
-    ],
-    imagen: "/jpg/fullbody.jpg", // Placeholder - reemplazar con imagen de clase con pesas
+    nombre: "BVRRE Full Body",
+    horarios: ["Lunes - 18:30h", "Martes - 09:30h"],
+    imagen: "/jpg/Rodearte_03-139.jpg",
+    posicion: "object-center",
+    alt: "Alumna de espaldas en la barra durante una clase de BVRRE Full Body",
   },
   {
-    id: "02",
-    nombre: "Deep Stretch",
-    descripcion: "Apertura, calma y respiración profunda.",
-    descripcionLarga: "Moverse despacio también transforma.",
-    beneficios: [
-      { label: "Apertura", icon: Heart },
-      { label: "Calma", icon: Wind },
-      { label: "Respiración", icon: Wind },
-    ],
-    imagen: "/jpg/Rodearte_01-47.jpg", // Placeholder - reemplazar con imagen de clase estirando
+    nombre: "BVRRE Ballet",
+    horarios: ["Miércoles - 18:30h", "Jueves - 09:30h"],
+    imagen: "/jpg/Rodearte_03-130.jpg",
+    posicion: "object-center",
+    alt: "Alumna estirando en la barra en una clase de BVRRE Ballet",
   },
   {
-    id: "03",
-    nombre: "Somática Creativa",
-    descripcion: "Movimiento para soltar, sentir y expresar.",
-    descripcionLarga: "Un diálogo íntimo entre cuerpo y emoción.",
-    beneficios: [
-      { label: "Liberación", icon: Sparkles },
-      { label: "Expresión", icon: Heart },
-      { label: "Conexión", icon: Heart },
-    ],
-    imagen: "/jpg/Rodearte_01-50.jpg", // Placeholder - reemplazar con imagen de palma + cielo
-  },
-  {
-    id: "04",
-    nombre: "Relajación & Breathwork",
-    descripcion: "Regular tu sistema y bajar al cuerpo.",
-    descripcionLarga: "Respirar para volver a ti.",
-    beneficios: [
-      { label: "Relajación", icon: Wind },
-      { label: "Respiración", icon: Wind },
-      { label: "Presencia", icon: Heart },
-    ],
-    imagen: "/jpg/Rodearte_01-8.jpg", // Placeholder - reemplazar con imagen de taza + incienso
+    nombre: "Rodearte Stretch",
+    horarios: ["Viernes - 18:30h"],
+    imagen: "/jpg/Rodearte_03-22.jpg",
+    posicion: "object-[center_85%]",
+    alt: "Clase de Rodearte Stretch con rodillo frente al espejo del estudio",
   },
 ];
 
 export function Clases() {
   return (
-    <section id="clases" className="py-16 md:py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12 md:mb-16">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-4">
-              Lo que hacemos
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg font-sans text-muted-foreground">
-              Diferentes formas de movimiento y acompañamiento para encontrarte
-              exactamente donde estás.
-            </p>
-          </div>
-        </div>
+    <section id="clases" className="relative bg-background pb-20 pt-16 md:pb-24 md:pt-24">
+      <Blob className="pointer-events-none absolute -right-[7%] -top-[4%] z-0 hidden w-[34%] md:block" />
 
-        {/* Lista de clases */}
-        <div className="space-y-0">
-          {clases.map((clase, index) => {
-            const IconComponent = clase.beneficios[0]?.icon || Zap;
-            return (
-              <div key={clase.id}>
-                {index > 0 && (
-                  <div className="border-t border-border/50 my-6 sm:my-8 md:my-12" />
-                )}
-                <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 md:gap-8 items-start lg:items-center">
-                  {/* Número */}
-                  <div className="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-muted-foreground/40">
-                    {clase.id}
-                  </div>
+      <div className="rd-container relative z-10">
+        <h2 className="text-h2 font-serif text-foreground">Lo que hacemos</h2>
+        <p className="text-body mt-3 font-sans text-foreground">
+          Elige la clase que te pida el cuerpo
+          <br />
+          Todas están pensadas para acompañarte
+        </p>
 
-                  {/* Contenido */}
-                  <div className="space-y-3 sm:space-y-4">
-                    <div>
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-2">
-                        {clase.nombre}
-                      </h3>
-                      <p className="text-sm sm:text-base md:text-lg font-sans text-muted-foreground mb-1">
-                        {clase.descripcion}
-                      </p>
-                      <p className="text-xs sm:text-sm md:text-base font-sans text-muted-foreground/80">
-                        {clase.descripcionLarga}
-                      </p>
-                    </div>
-
-                    {/* Beneficios */}
-                    <div className="flex flex-wrap gap-2">
-                      {clase.beneficios.map((beneficio, idx) => {
-                        const Icon = beneficio.icon;
-                        return (
-                          <div
-                            key={idx}
-                            className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs sm:text-sm font-sans text-foreground"
-                          >
-                            <Icon className="h-3 w-3 sm:h-4 sm:w-4" />
-                            <span>{beneficio.label}</span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Imagen */}
-                  <div className="relative w-full lg:w-64 h-40 sm:h-48 md:h-64 lg:h-80 overflow-hidden rounded-lg">
-                    <Image
-                      src={clase.imagen}
-                      alt={clase.nombre}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 256px"
-                    />
-                  </div>
-                </div>
+        <ul className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:mt-12 md:grid-cols-3 md:gap-[2.8%]">
+          {clases.map((clase) => (
+            <li key={clase.nombre}>
+              <div className="relative aspect-square w-full overflow-hidden">
+                <Image
+                  src={clase.imagen}
+                  alt={clase.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  className={`object-cover ${clase.posicion}`}
+                />
               </div>
-            );
-          })}
-        </div>
+              <h3 className="mt-5 font-sans text-[clamp(1.1rem,1.75vw,1.4rem)] font-bold uppercase leading-none text-black">
+                {clase.nombre}
+              </h3>
+              <p className="text-body mt-2 font-sans uppercase text-foreground">
+                {clase.horarios.map((h) => (
+                  <span key={h} className="block">
+                    {h}
+                  </span>
+                ))}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
