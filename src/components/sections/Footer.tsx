@@ -18,7 +18,7 @@ const linkClass =
 
 export function Footer() {
   return (
-    <footer className="bg-foreground pb-14 pt-11 text-[color:var(--cream-text)]">
+    <footer className="bg-foreground pb-10 pt-8 text-[color:var(--cream-text)] md:pb-14 md:pt-11">
       <div className="rd-container">
         <div className="flex items-start justify-between">
           <Link href="/" aria-label="Rodearte, inicio">
@@ -27,7 +27,7 @@ export function Footer() {
               alt="Rodearte"
               width={550}
               height={170}
-              className="h-auto w-[130px] md:w-[160px]"
+              className="h-auto w-[96px] md:w-[160px]"
             />
           </Link>
           <nav aria-label="Enlaces del pie" className="flex items-center gap-5 pt-2">
