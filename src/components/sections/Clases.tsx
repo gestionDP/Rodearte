@@ -28,8 +28,8 @@ const clases = [
 export function Clases() {
   return (
     <section id="clases" className="relative overflow-hidden bg-background pb-14 pt-12 md:pb-24 md:pt-24">
-      {/* Icono grande y difuminado por detrás, contenido dentro de la sección (cortado por el borde derecho, como en el Canva) */}
-      <Blob className="pointer-events-none absolute left-[55%] top-[3%] z-0 h-[94%] w-auto max-w-none opacity-[0.07] md:left-[53%] md:opacity-[0.16]" />
+      {/* Icono difuminado por detrás, completo (sin cortar) en la esquina superior derecha de la sección */}
+      <Blob className="pointer-events-none absolute right-[2%] top-[1%] z-0 h-[15%] w-auto max-w-none opacity-[0.3] md:right-[4%] md:top-[4%] md:h-[88%] md:opacity-[0.2]" />
 
       <div className="rd-container relative z-10">
         <h2 className="text-h2 font-serif text-foreground">Lo que hacemos</h2>

@@ -46,7 +46,7 @@ export function Ropa() {
       {/* Móvil: foto principal recortada (sin pared) y las dos de detalle en una fila */}
       <div className="rd-container mt-5 pb-8 md:hidden">
         <div className="relative aspect-[5/4] w-full overflow-hidden">
-          <Image src={fotos.centro.src} alt={fotos.centro.alt} fill sizes="100vw" className="object-cover object-[50%_50%]" />
+          <Image src={fotos.centro.src} alt={fotos.centro.alt} fill sizes="100vw" className="object-cover object-[50%_78%]" />
         </div>
         <div className="mt-2 grid grid-cols-2 gap-2">
           <div className="relative aspect-[4/3] overflow-hidden">
