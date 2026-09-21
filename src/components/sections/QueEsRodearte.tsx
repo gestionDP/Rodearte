@@ -34,7 +34,7 @@ export function QueEsRodearte() {
             alt="Vanesa, fundadora de Rodearte, sonriendo en el estudio"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover object-[50%_88%] md:object-[51%_83%]"
+            className="object-cover object-[50%_68%] md:object-[51%_83%]"
           />
         </div>
       </div>
