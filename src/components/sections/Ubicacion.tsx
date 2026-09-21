@@ -13,7 +13,7 @@ export function Ubicacion() {
           </p>
         </div>
 
-        <div className="relative aspect-[348/155] w-full overflow-hidden rounded-[28px] bg-secondary/40 md:w-[54%] md:rounded-[40px]">
+        <div className="relative aspect-[348/155] w-full overflow-hidden bg-secondary/40 md:w-[54%]">
           <iframe
             src={MAP_EMBED_URL}
             title="Mapa de Rodearte en L'Eliana"
