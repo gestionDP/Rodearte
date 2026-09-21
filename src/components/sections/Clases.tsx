@@ -27,8 +27,8 @@ const clases = [
 
 export function Clases() {
   return (
-    <section id="clases" className="relative bg-background pb-20 pt-16 md:pb-24 md:pt-24">
-      <Blob className="pointer-events-none absolute -right-[7%] -top-[4%] z-0 hidden w-[34%] md:block" />
+    <section id="clases" className="relative bg-background pb-14 pt-12 md:pb-24 md:pt-24">
+      <Blob className="pointer-events-none absolute right-[4%] top-2 z-0 h-auto w-[22%] opacity-60 md:-top-[2%] md:w-[15%]" />
 
       <div className="rd-container relative z-10">
         <h2 className="text-h2 font-serif text-foreground">Lo que hacemos</h2>
@@ -38,7 +38,7 @@ export function Clases() {
           Todas están pensadas para acompañarte
         </p>
 
-        <ul className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:mt-12 md:grid-cols-3 md:gap-[2.8%]">
+        <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:mt-12 md:grid-cols-3 md:gap-[2.8%]">
           {clases.map((clase) => (
             <li key={clase.nombre}>
               <div className="relative aspect-square w-full overflow-hidden">

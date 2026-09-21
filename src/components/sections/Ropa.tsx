@@ -20,7 +20,7 @@ const fotos = {
 
 export function Ropa() {
   return (
-    <section id="ropa" className="bg-secondary/50 pt-12 md:pt-14">
+    <section id="ropa" className="bg-secondary/50 pt-8 md:pt-14">
       <div className="rd-container text-center">
         <h2 className="text-h2 font-serif uppercase text-foreground">Ropa Rodearte</h2>
         <p className="text-body mt-3 font-sans text-primary">
@@ -30,30 +30,30 @@ export function Ropa() {
         </p>
       </div>
 
-      {/* Desktop: composición a sangre del Canva (laterales pegados a los bordes) */}
-      <div className="mt-10 hidden w-full items-start justify-between pb-[7%] md:flex">
-        <div className="relative mt-[11.9%] aspect-[234/274] w-[29.2%] overflow-hidden">
+      {/* Desktop: la composición del Canva, reducida y centrada para equilibrarla con el texto */}
+      <div className="rd-container mt-8 hidden items-start justify-between pb-14 md:flex">
+        <div className="relative mt-[9%] aspect-[234/250] w-[29%] overflow-hidden">
           <Image src={fotos.izquierda.src} alt={fotos.izquierda.alt} fill sizes="30vw" className={`object-cover ${fotos.izquierda.posicion}`} />
         </div>
-        <div className="relative aspect-[325/465] w-[40.6%] overflow-hidden">
+        <div className="relative aspect-[325/390] w-[38%] overflow-hidden">
           <Image src={fotos.centro.src} alt={fotos.centro.alt} fill sizes="41vw" className={`object-cover ${fotos.centro.posicion}`} />
         </div>
-        <div className="relative mt-[11.9%] aspect-[234/274] w-[29.2%] overflow-hidden">
+        <div className="relative mt-[9%] aspect-[234/250] w-[29%] overflow-hidden">
           <Image src={fotos.derecha.src} alt={fotos.derecha.alt} fill sizes="30vw" className={`object-cover ${fotos.derecha.posicion}`} />
         </div>
       </div>
 
-      {/* Móvil: foto principal y las dos de detalle en una fila */}
-      <div className="rd-container mt-8 pb-12 md:hidden">
-        <div className="relative aspect-[325/400] w-full overflow-hidden">
-          <Image src={fotos.centro.src} alt={fotos.centro.alt} fill sizes="100vw" className={`object-cover ${fotos.centro.posicion}`} />
+      {/* Móvil: foto principal recortada (sin pared) y las dos de detalle en una fila */}
+      <div className="rd-container mt-5 pb-8 md:hidden">
+        <div className="relative aspect-[4/3] w-full overflow-hidden">
+          <Image src={fotos.centro.src} alt={fotos.centro.alt} fill sizes="100vw" className="object-cover object-[50%_88%]" />
         </div>
         <div className="mt-2 grid grid-cols-2 gap-2">
-          <div className="relative aspect-[234/274] overflow-hidden">
-            <Image src={fotos.izquierda.src} alt={fotos.izquierda.alt} fill sizes="50vw" className={`object-cover ${fotos.izquierda.posicion}`} />
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image src={fotos.izquierda.src} alt={fotos.izquierda.alt} fill sizes="50vw" className="object-cover object-[50%_40%]" />
           </div>
-          <div className="relative aspect-[234/274] overflow-hidden">
-            <Image src={fotos.derecha.src} alt={fotos.derecha.alt} fill sizes="50vw" className={`object-cover ${fotos.derecha.posicion}`} />
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image src={fotos.derecha.src} alt={fotos.derecha.alt} fill sizes="50vw" className="object-cover object-[50%_65%]" />
           </div>
         </div>
       </div>
