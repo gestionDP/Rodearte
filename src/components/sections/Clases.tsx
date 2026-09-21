@@ -27,8 +27,9 @@ const clases = [
 
 export function Clases() {
   return (
-    <section id="clases" className="relative bg-background pb-14 pt-12 md:pb-24 md:pt-24">
-      <Blob className="pointer-events-none absolute right-[4%] top-2 z-0 h-auto w-[22%] opacity-60 md:-top-[2%] md:w-[15%]" />
+    <section id="clases" className="relative overflow-hidden bg-background pb-14 pt-12 md:pb-24 md:pt-24">
+      {/* Icono difuminado por detrás, completo (sin cortar) en la esquina superior derecha de la sección */}
+      <Blob className="pointer-events-none absolute right-[2%] top-[1%] z-0 h-[15%] w-auto max-w-none opacity-[0.3] md:-right-[3%] md:top-[1%] md:h-[62%] md:opacity-[0.2]" />
 
       <div className="rd-container relative z-10">
         <h2 className="text-h2 font-serif text-foreground">Lo que hacemos</h2>
