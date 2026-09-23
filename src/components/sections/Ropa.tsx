@@ -31,15 +31,15 @@ export function Ropa() {
       </div>
 
       {/* Desktop: la composición del Canva, reducida y centrada para equilibrarla con el texto */}
-      <div className="rd-container mt-8 hidden items-start justify-between pb-14 md:flex">
-        <div className="relative mt-[9%] aspect-[234/250] w-[29%] overflow-hidden">
-          <Image src={fotos.izquierda.src} alt={fotos.izquierda.alt} fill sizes="30vw" className={`object-cover ${fotos.izquierda.posicion}`} />
+      <div className="rd-container mt-7 hidden items-start justify-center gap-[3%] pb-12 md:flex">
+        <div className="relative mt-[5.5%] aspect-[234/250] w-[21%] overflow-hidden">
+          <Image src={fotos.izquierda.src} alt={fotos.izquierda.alt} fill sizes="22vw" className={`object-cover ${fotos.izquierda.posicion}`} />
         </div>
-        <div className="relative aspect-[325/390] w-[38%] overflow-hidden">
-          <Image src={fotos.centro.src} alt={fotos.centro.alt} fill sizes="41vw" className={`object-cover ${fotos.centro.posicion}`} />
+        <div className="relative aspect-[325/390] w-[26%] overflow-hidden">
+          <Image src={fotos.centro.src} alt={fotos.centro.alt} fill sizes="27vw" className={`object-cover ${fotos.centro.posicion}`} />
         </div>
-        <div className="relative mt-[9%] aspect-[234/250] w-[29%] overflow-hidden">
-          <Image src={fotos.derecha.src} alt={fotos.derecha.alt} fill sizes="30vw" className={`object-cover ${fotos.derecha.posicion}`} />
+        <div className="relative mt-[5.5%] aspect-[234/250] w-[21%] overflow-hidden">
+          <Image src={fotos.derecha.src} alt={fotos.derecha.alt} fill sizes="22vw" className={`object-cover ${fotos.derecha.posicion}`} />
         </div>
       </div>
 

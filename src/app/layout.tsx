@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Rodearte · Tu espacio de movimiento consciente",
   description:
-    "Estudio de movimiento consciente en L'Eliana: clases de barre, ballet y stretch, ropa Rodearte y masaje ayurvédico. Un espacio íntimo para escucharte y habitarte.",
+    "Estudio de movimiento consciente en L'Eliana: clases de barre, ballet y stretch y ropa Rodearte. Un espacio íntimo para escucharte y habitarte.",
 };
 
 export default function RootLayout({

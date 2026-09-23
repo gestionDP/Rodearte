@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/Hero";
 import { Clases } from "@/components/sections/Clases";
 import { QueEsRodearte } from "@/components/sections/QueEsRodearte";
 import { Ropa } from "@/components/sections/Ropa";
-import { Masaje } from "@/components/sections/Masaje";
 import { Ubicacion } from "@/components/sections/Ubicacion";
 import { Footer } from "@/components/sections/Footer";
 
@@ -16,7 +15,6 @@ export default function Home() {
         <Clases />
         <QueEsRodearte />
         <Ropa />
-        <Masaje />
         <Ubicacion />
       </main>
       <Footer />
